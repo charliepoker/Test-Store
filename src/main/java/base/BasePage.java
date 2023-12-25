@@ -54,6 +54,10 @@ public class BasePage {
     }
 
 
+//    TODO
+/*
+Create a proper folder for the screenshoots
+*/
     public void takeSnapShot(WebDriver webDriver) throws IOException{
         File srcFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
 
