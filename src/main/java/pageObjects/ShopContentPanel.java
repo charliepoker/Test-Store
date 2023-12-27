@@ -9,7 +9,7 @@ public class ShopContentPanel {
     public WebDriver driver;
 
     By continueShoppingBtn = By.xpath("//button[contains(text(), 'Continue')]");
-    By checkoutBtn = By.linkText("PROCEED TO CHECKOUT");
+    By checkoutBtn = By.xpath("//div[@id='blockcart-modal']/div[@role='document']/div[@class='modal-content']//a[@href='//teststore.automationtesting.co.uk/cart?action=show']");
 
     public ShopContentPanel(WebDriver driver) {
         this.driver = driver;
