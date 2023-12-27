@@ -1,6 +1,4 @@
 import base.BasePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,13 +24,13 @@ public class AddRemoveItemBasketTest extends BasePage {
     }
 
     @AfterTest
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver = null;
     }
 
     @Test
-    public void addRemoveItem() throws  InterruptedException{
+    public void addRemoveItem() throws InterruptedException {
         // creating an object of the automationtesting.co.uk webpage
         HomePage home = new HomePage(driver);
 
@@ -48,7 +46,7 @@ public class AddRemoveItemBasketTest extends BasePage {
         // creating an object of the shop products page (when a product has been selected)
         // Handle Dropdown menu to select size
         ShopProductPage shopProd = new ShopProductPage(driver);
-        Select option  = new Select(shopProd.getSizeOption());
+        Select option = new Select(shopProd.getSizeOption());
         option.selectByVisibleText("M");
         shopProd.getQuantIncrease().click();
         shopProd.getAddToCartBtn().click();
